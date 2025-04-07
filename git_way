@@ -49,3 +49,86 @@ git push origin master (或 git push origin main)
 這樣你的更改就會被推送到 GitHub 上，並且保持最新！
 
 如果有其他問題或需要更詳細的解釋，隨時告訴我！
+
+
+
+
+
+步驟 1：在 C 資料夾上操作
+初始化或設置遠端儲存庫
+假設 C 專案的 Git 儲存庫已經與 GitHub 上的儲存庫對應，設定 C 資料夾的遠端儲存庫：
+
+bash
+複製程式碼
+git remote add origin https://github.com/你的帳號/C-repo.git
+提交並推送 C 專案
+完成修改後，使用以下命令推送到 C-repo 儲存庫：
+
+bash
+複製程式碼
+git add .
+git commit -m "Update C project"
+git push origin master
+步驟 2：在 Python 資料夾上操作
+初始化或設置遠端儲存庫
+假設 Python 專案有自己的 Git 儲存庫，設置 Python 資料夾的遠端儲存庫：
+
+bash
+複製程式碼
+cd /path/to/python-project
+git remote add origin https://github.com/你的帳號/Python-repo.git
+提交並推送 Python 專案
+當你在 Python 資料夾中完成修改後，可以推送它到 Python-repo 儲存庫：
+
+bash
+複製程式碼
+git add .
+git commit -m "Update Python project"
+git push origin master
+小結
+每個專案資料夾有自己的 Git 儲存庫設定。
+
+你可以在 C 資料夾使用 git remote add 來設置遠端 Git 儲存庫，並推送到 GitHub 上的 C-repo。
+
+同理，你也可以在 Python 資料夾設定遠端儲存庫，並推送到 Python-repo。
+
+這樣，你就可以輕鬆地管理不同的專案並將它們推送到不同的 GitHub 儲存庫。
+
+如果有其他問題，隨時告訴我！
+
+
+
+那要怎麼查詢 我的這個資料夾要推送到哪
+
+
+ChatGPT 說：
+如果你想查詢目前資料夾的 Git 儲存庫設定（即推送到哪個遠端儲存庫），可以使用 git remote -v 來查看相關資訊。
+
+查詢推送的遠端儲存庫
+在你的專案資料夾中，執行以下命令：
+
+bash
+複製程式碼
+git remote -v
+這會顯示出你設定的遠端儲存庫 URL。例如：
+
+bash
+複製程式碼
+origin  https://github.com/你的帳號/C-repo.git (fetch)
+origin  https://github.com/你的帳號/C-repo.git (push)
+這表示當你推送或拉取（pull）更改時，Git 會使用 https://github.com/你的帳號/C-repo.git 這個 URL。
+
+如果沒有設置遠端儲存庫
+如果沒有看到任何遠端儲存庫 URL，表示該資料夾尚未設置遠端儲存庫。在這種情況下，你需要設定遠端儲存庫：
+
+bash
+複製程式碼
+git remote add origin https://github.com/你的帳號/你的儲存庫.git
+這樣，你就能夠設置並查看推送到哪個遠端儲存庫。
+
+小結
+git remote -v 可以查看當前儲存庫的遠端 URL。
+
+如果你沒有設置遠端儲存庫，使用 git remote add origin <url> 來設置它。
+
+希望這樣能幫助你！如果還有問題，隨時告訴我！
