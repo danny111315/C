@@ -1,0 +1,51 @@
+步驟 1：編寫新的程式碼
+你可以在本地修改或新增檔案。編寫完成後，這些變更會反映在你的本地 Git 儲存庫中。
+
+步驟 2：檢查更改
+在提交新更改之前，你可以使用 git status 檢查哪些檔案已經變更，並準備好提交：
+
+bash
+複製程式碼
+git status
+這樣你可以看到哪些檔案已經變動或者新增。
+
+步驟 3：加入更改到暫存區
+將變更加入到暫存區，以便提交：
+
+bash
+複製程式碼
+git add .
+這條指令會把所有變更過的檔案加入暫存區。如果你只想加入某些檔案，可以指定檔案名，例如：
+
+bash
+複製程式碼
+git add 新檔案名
+步驟 4：提交更改
+接下來，提交變更並加上提交訊息：
+
+bash
+複製程式碼
+git commit -m "Add new feature"  # 用你的訊息來描述變更
+步驟 5：推送到 GitHub
+最後，將你的更改推送到 GitHub 上的遠端儲存庫：
+
+bash
+複製程式碼
+git push origin master
+如果你的 GitHub 儲存庫使用的是 main 分支，則應該使用：
+
+bash
+複製程式碼
+git push origin main
+總結
+每當你修改檔案後，只需要執行以下指令來同步你的更改：
+
+git add . (或 git add <file> 來加入特定檔案)
+
+git commit -m "描述你的變更"
+
+git push origin master (或 git push origin main)
+
+這樣你的更改就會被推送到 GitHub 上，並且保持最新！
+
+如果有其他問題或需要更詳細的解釋，隨時告訴我！
